@@ -9,7 +9,7 @@ function selectionSort(array) {
         if (smallestIndex != splitter) {
             const temp = array[smallestIndex];
             array[smallestIndex] = array[splitter];
-            array[splitter] =temp;
+            array[splitter] = temp;
         }
     }
 

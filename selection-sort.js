@@ -1,14 +1,16 @@
 function selectionSort(array) {
-    for (let spliter = 0; spliter < array.length - 1; spliter++) {
-        let smallestIndex = spliter;
-        for (let i = spliter + 1; i < array.length; i++) {
+    for (let splitter = 0; splitter < array.length - 1; splitter++) {
+        let smallestIndex = splitter;
+        for (let i = splitter + 1; i < array.length; i++) {
             if (array[i] < array[smallestIndex]) {
                 smallestIndex = i;
             }
         }
-        const temp = array[spliter];
-        array[spliter] = array[smallestIndex];
-        array[smallestIndex] = temp;
+        if (smallestIndex != splitter) {
+            const temp = array[smallestIndex];
+            array[smallestIndex] = array[splitter];
+            array[splitter] =temp;
+        }
     }
 
     return array;
